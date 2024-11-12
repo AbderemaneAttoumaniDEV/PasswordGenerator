@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Générateur de Mot de Passe</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+</head>
+<body class="bg-gray-900 text-gray-100 flex justify-center items-center min-h-screen">
+
+<div class="container max-w-md w-full bg-gray-800 p-8 rounded-lg shadow-lg text-center transition transform hover:scale-105 duration-300">
+    <h1 class="text-3xl font-bold text-gray-200 mb-6">Générateur de Mot de Passe</h1>
+
+    <!-- Formulaire pour générer un mot de passe -->
+    <div class="password-generator mb-8 p-4 bg-gray-700 rounded-lg shadow-md">
+        <h2 class="text-xl text-gray-200 mb-4 font-semibold">Générer un mot de passe</h2>
+        <form id="passwordGenerateForm" class="space-y-4">
+            <label for="length" class="block font-semibold text-gray-300">Longueur du mot de passe :</label>
+            <input type="number" id="length" name="length" min="4" max="32" value="12" class="w-full p-2 bg-gray-600 text-gray-100 rounded-md focus:outline-none focus:ring-2 focus:ring-gray-500">
+            <button type="button" id="generateBtn" class="w-full py-2 bg-gray-500 hover:bg-gray-400 text-white font-bold rounded-md transition transform hover:scale-105 active:scale-95 duration-200">Générer</button>
+        </form>
+        <p id="generatedPassword" class="mt-4 text-gray-100 font-semibold"></p>
+        
+        <!-- Bouton Copier, masqué par défaut -->
+        <button id="copyBtn" class="copy-button hidden w-full py-2 mt-2 bg-gray-600 hover:bg-gray-500 text-white font-bold rounded-md transition transform hover:scale-105 active:scale-95 duration-200">Copier le mot de passe</button>
+    </div>
+
+    <!-- Formulaire pour vérifier la robustesse d'un mot de passe -->
+    <div class="password-checker p-4 bg-gray-700 rounded-lg shadow-md">
+        <h2 class="text-xl text-gray-200 mb-4 font-semibold">Vérifier la robustesse</h2>
+        <form id="passwordCheckForm" class="space-y-4">
+            <label for="password" class="block font-semibold text-gray-300">Entrez un mot de passe :</label>
+            <input type="text" id="password" name="password" class="w-full p-2 bg-gray-600 text-gray-100 rounded-md focus:outline-none focus:ring-2 focus:ring-gray-500">
+            <!-- Bouton Coller, masqué par défaut -->
+        <button id="pasteBtn" class="copy-button hidden w-full py-2 mt-2 bg-gray-600 hover:bg-gray-500 text-white font-bold rounded-md transition transform hover:scale-105 active:scale-95 duration-200">Coller</button>
+            <button type="button" id="checkBtn" class="w-full py-2 bg-gray-500 hover:bg-gray-400 text-white font-bold rounded-md transition transform hover:scale-105 active:scale-95 duration-200">Vérifier</button>
+        </form>
+        <p id="passwordStrength" class="mt-4 text-gray-100 font-semibold"></p>
+    </div>
+</div>
+
+<script src="./src/js/main.js"></script>
+</body>
+</html>

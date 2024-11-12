@@ -1,0 +1,144 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #f0f4f8;
+    color: #333;
+}
+
+.container {
+    max-width: 400px;
+    width: 100%;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: box-shadow 0.3s ease;
+}
+
+.container:hover {
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+h1 {
+    color: #4a90e2;
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+h2 {
+    color: #555;
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+label {
+    display: block;
+    margin-bottom: 8px;
+    color: #333;
+    font-weight: bold;
+}
+
+input[type="number"],
+input[type="text"] {
+    width: calc(100% - 22px);
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-size: 16px;
+    color: #333;
+    transition: border-color 0.3s ease;
+}
+
+input[type="number"]:focus,
+input[type="text"]:focus {
+    border-color: #4a90e2;
+    outline: none;
+}
+
+button {
+    width: 100%;
+    padding: 12px;
+    background-color: #4a90e2;
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+button:hover {
+    background-color: #3b7dc9;
+    transform: translateY(-2px);
+}
+
+button:active {
+    transform: translateY(0);
+}
+
+.generated-password,
+.password-strength {
+    margin-top: 15px;
+    font-size: 16px;
+    color: #333;
+}
+
+.generated-password strong,
+.password-strength strong {
+    color: #4a90e2;
+}
+
+.password-generator,
+.password-checker {
+    margin-bottom: 20px;
+    padding: 15px;
+    background-color: #f9fafb;
+    border: 1px solid #e3e6e9;
+    border-radius: 8px;
+}
+
+.password-generator form,
+.password-checker form {
+    margin-top: 15px;
+}
+
+.generated-password,
+.password-strength {
+    background-color: #e6f7ff;
+    padding: 10px;
+    border-radius: 8px;
+    margin-top: 10px;
+    font-weight: bold;
+    color: #333;
+    border: 1px solid #4a90e2;
+}
+
+
+.copy-button {
+    background-color: #4a90e2;
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    font-size: 14px;
+    font-weight: bold;
+    padding: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-top: 10px;
+}
+
+.copy-button:hover {
+    background-color: #3b7dc9;
+}

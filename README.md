@@ -1,4 +1,4 @@
-# Générateur de Mot de Passe Sécurisé
+# Générateur de Mot de Passe Sécurisé 🔐
 
 Un générateur de mot de passe sécurisé et un vérificateur de robustesse avec une interface utilisateur attrayante et réactive.
 
